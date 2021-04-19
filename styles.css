@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#pickTheDateHolder {
+    visibility: hidden;
+}
+
+.content {
+    margin-top: 10px;
+    margin-bottom: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.content img {
+    max-width: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: calc(100vw * .5625);
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #4e4e4e;
+    color: white;
+    text-align: center;
+    height: 30px;
+}
+
+.footer a {
+    color: rgb(255, 255, 255);
+    padding-left: 50px;
+    text-decoration: none;
+    padding-top: 5px;
+}
+
+.footer a:hover {
+    color: rgb(177, 177, 177);
+    padding-left: 50px;
+    text-decoration: none;
+}
+
+#weather-content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.weather-sol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.weather-content h3{
+    margin: 0 !important;
+}
+
+hr {
+    width: 70%;
+    height: 1px;
+    background-color: rgb(179, 179, 179);
+    margin: 1px;
+}
+
+.date {
+    font-size: medium;
+    font-family: 'Space Mono', monospace;
+}
+
+.sol {
+    font-family: 'Audiowide', cursive;
+}
+
+#rover-content {
+    column-count: 1;   
+}
+.rover-img-holder {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.selector {
+    overflow: hidden;
+    border: 1px solid rgb(114, 114, 114);
+    background-color: #f1f1f1;
+    margin-bottom: 15px;
+}
+
+.selector-link{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    padding: 4px 6px;
+    font-size: 15px;
+}
+
+.selector-link:hover {
+    background-color: #ddd;
+}
+
+#picktTheDateHolder, #pickTheDateHolder2 {
+    margin-bottom: 8px;
+}
+  
+
+.selector-link.active {
+    background-color: #ccc;
+}
+
+.apod-img {
+    margin-bottom: 5px;
+}
+
+/* Tablet Styles */
+@media only screen and (max-width: 961px) and (min-width: 460px) {
+    .selector-link{
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        padding: 14px 16px;
+        font-size: 20px;
+    }
+    #rover-content {
+        column-count: 2;   
+    }
+    #weather-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4px;
+    }
+}
+/*Slightly Larger Screens*/
+@media only screen and (min-width: 961px) and (max-width: 1400px){
+    #rover-content {
+        column-count: 3;   
+    }
+    #weather-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 4px;
+    }
+}
+/*Large Screens*/
+@media only screen and (min-width: 1401px) {
+    #rover-content {
+        column-count: 4;   
+    }
+    #weather-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 4px;
+    }
+    .content {
+        margin-left: 300px;
+        margin-right: 300px;
+        margin-bottom: 0;
+        background-color: white;
+        padding: 50px;
+        padding-top: 10px;
+        margin-top: 0px;
+    }
+    .color {
+        margin-left: 300px;
+        margin-right: 300px;
+        width: calc(100% - 600px);
+        height: 400px;
+        background-color: white;
+    }
+    body {
+        background-color: #f5f5f5;
+    }
+}

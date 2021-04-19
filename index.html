@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Cool NASA Stuff</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/datepicker.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+    </style>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body onload="initialLoad()">
+    <div class="content">
+        <h1 class="intro APOD">NASA's APOD</h1>
+        <h6>(Atsronomical Photo of the Day)</h6>
+        <div id="pickTheDateHolder">
+            <input type="text" placeholder="click to show datepicker" id="pickTheDate" />
+            <button id="changeTheDate" onclick="changeTheDate()">Go</button>
+        </div>
+        <div id="apod-content">
+            <p class='load-msg'>Loading...</p>
+        </div>
+        <p class="credit-note">Data retrieved from <a href="https://api.nasa.gov/#apod" target="_blank">NASA's APOD
+                API</a></p>
+
+
+        <div class="rover-pics">
+            <h1 class="intro rover">Mars Rover Photos</h1>
+            <div class="selector">
+                <button class="selector-link" onclick="selectRover(event, 'Curiosity')">Curiosity</button>
+                <button class="selector-link" onclick="selectRover(event, 'Opportunity')">Opportunity</button>
+                <button class="selector-link" onclick="selectRover(event, 'Spirit')">Spirit</button>
+            </div>
+            <div id="pickTheDateHolder2">
+                <input type="text" placeholder="click to show datepicker" id="pickTheDate2" />
+                <button id="changeTheDate2" onclick="changeTheDate2()">Go</button>
+            </div>
+            <div id="rover-content">
+                <p class='load-msg'>Select a Rover</p>
+            </div>
+            <p class="credit-note">Data retrieved from <a href="https://api.nasa.gov/#mars-rover-photos">NASA's Rover
+                    Photo API</a></p>
+
+        </div>
+        <h1 class="intro weather">Mars Weather</h1>
+        <div id="weather-content">
+            <p class='load-msg'>Loading...</p>
+        </div>
+        <p class="credit-note">Data retrieved from <a href="https://api.nasa.gov/#insight">NASA's Insight Weather
+                API</a></p>
+    </div>
+    <div class="color"></div>
+
+    <div class="footer">
+        <a href="https://github.com/jaysoned/cp2redo" target="_blank">Github Code</a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+        integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+    <script text="type/javascript" src="/script.js">
+    </script>
+</body>
+
+</html>
